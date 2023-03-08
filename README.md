@@ -34,6 +34,8 @@ Latest Xray Core v1.7.5
 
   ```html
   apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+  
+  apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
 
   ```
 
