@@ -1,6 +1,6 @@
 <h2 align="center">
 
-♦️Autoscript SSH XRAYS Websocket Multiport By NevermoreSSH♦️
+♦️Autoscript SSH XRAYS Websocket Multiport By NevermoreSSH V2♦️
 
 Latest Xray Core v1.7.5
 
@@ -50,11 +50,26 @@ Latest Xray Core v1.7.5
   apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && sleep 2 && reboot
 
   ```
+  
+ or
+   ```html
+  apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && reboot
+
+  ```
+ 
  
 ## ♦️INSTALLATION SCRIPT ( Recommended Debian 10 )♦️
 
   ```html
   sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/NevermoreSSH/sapphire/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+
+  ```
+  
+  
+  ## ♦️FIX IF XRAYCORE PROBLEM (OLD VERSION V1.6.5)♦️
+
+  ```html
+  mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/v1.0.0/xray.linux.64bit" && chmod 755 /usr/local/bin/xray && restart
 
   ```
 
