@@ -66,7 +66,7 @@ Latest Xray Core v1.7.5
   ```
   
   
-  ## ♦️FIX IF XRAYCORE PROBLEM (OLD VERSION V1.6.5)♦️
+  ## ⚠️ FIX IF XRAYCORE PROBLEM (OLD VERSION V1.6.5) ⚠️
 
   ```html
   mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/v1.0.0/xray.linux.64bit" && chmod 755 /usr/local/bin/xray && restart
