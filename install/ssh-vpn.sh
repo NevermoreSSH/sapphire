@@ -364,10 +364,9 @@ chmod +x dns
 chmod +x nf
 chmod +x netf
 chmod +x ins-helium
-echo "0 0 * * * root delete" >> /etc/crontab
+echo "0 0 * * * root delete && xp" >> /etc/crontab
 echo "*/2 * * * * root clear-log" >> /etc/crontab
 echo "0 5 * * * root reboot" >> /etc/crontab
-echo "0 0 * * * root xp" >> /etc/crontab
 
 # // remove unnecessary files
 cd
