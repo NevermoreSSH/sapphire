@@ -2,7 +2,7 @@
 
 ♦️Autoscript SSH XRAYS Websocket Multiport By NevermoreSSH♦️
 
-Latest Xray Core v1.7.5
+Latest Xray Core
 
 
  <h2 align="center">AutoScript VPN <img src="https://img.shields.io/badge/Version-Stabil_2.0-purple.svg"></h2>
@@ -66,10 +66,10 @@ Latest Xray Core v1.7.5
   ```
   
   
-  ## ⚠️ FIX IF XRAYCORE PROBLEM (OLD VERSION V1.6.5) ⚠️
+  ## ⚠️ FIX IF XRAYCORE PROBLEM (OLD VERSION V1.7.5) ⚠️
 
   ```html
-  mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/v1.0.0/xray.linux.64bit" && chmod 755 /usr/local/bin/xray && restart
+  mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/Xray_Official_1.7.5/xray" && chmod 755 /usr/local/bin/xray && restart
 
   ```
 
