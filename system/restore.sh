@@ -38,7 +38,7 @@ rm -f backup.zip
 echo ""
 echo -e "[ ${green}INFO${NC} ] VPS Data Restore Complete !"
 echo ""
-echo -e "[ ${green}INFO${NC} ] Restart All Service"
+echo -e "[ ${green}INFO${NC} ] Reboot in 5 second"
 systemctl restart nginx
 systemctl restart xray.service
 systemctl restart xray@none.service
@@ -49,6 +49,5 @@ systemctl restart xray@trnone.service
 systemctl restart xray@xtrojan.service
 systemctl restart xray@trojan.service
 service cron restart
-sleep 0.5
-clear
+sleep 5
 reboot
