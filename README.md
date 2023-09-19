@@ -2,7 +2,6 @@
 
 ♦️Autoscript SSH XRAYS Websocket Multiport By NevermoreSSH♦️
 
-Latest Xray Core
 
 
  <h2 align="center">AutoScript VPN <img src="https://img.shields.io/badge/Version-Stabil_2.0-purple.svg"></h2>
