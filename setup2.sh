@@ -278,6 +278,6 @@ echo -e "    \e[1;32m|         PREMIUM BY NevermoreSSH          |\e[0m"
 echo -e "    \e[1;32m'------------------------------------------'\e[0m"
 echo ""
 echo -e "   \e[1;32mYour VPS Will Be Automatical Reboot In 5 seconds\e[0m"
-rm -r setup.sh
+rm -r setup2.sh
 sleep 5
 reboot
