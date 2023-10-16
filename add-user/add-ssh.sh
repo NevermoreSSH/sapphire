@@ -57,8 +57,6 @@ IP=$(wget -qO- icanhazip.com);
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /usr/local/etc/xray/domain)
-nsdomain=$(cat /root/nsdomain)
-pubkey=$(cat /etc/slowdns/server.pub)
 else
 domain=$IP
 fi
