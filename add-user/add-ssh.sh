@@ -72,6 +72,8 @@ export ohpdrop="$(cat ~/log-install.txt | grep -w "OHP Dropbear" | cut -d: -f2|s
 export wsdropbear="$(cat ~/log-install.txt | grep -w "Websocket SSH(HTTP)" | cut -d: -f2|sed 's/ //g')"
 export wsstunnel="$(cat ~/log-install.txt | grep -w "Websocket SSL(HTTPS)" | cut -d: -f2|sed 's/ //g')"
 export wsovpn="$(cat ~/log-install.txt | grep -w "Websocket OpenVPN" | cut -d: -f2|sed 's/ //g')"
+nsdomain1=$(cat /root/nsdomain)
+pubkey1=$(cat /etc/slowdns/server.pub)
 
 sleep 1
 echo Ping Host
@@ -103,8 +105,8 @@ echo -e "Created          : $harini"
 echo -e "Expired          : $exp1"
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
 echo -e "Domain           : $domain"
-echo -e "Name Server(NS)  : $(cat /root/nsdomain)"
-echo -e "Pubkey           : $(cat /etc/slowdns/server.pub)"
+echo -e "Name Server(NS)  : $nsdomain1"
+echo -e "Pubkey           : $pubkey1"
 echo -e "IP/Host          : $MYIP"
 echo -e "OpenSSH          : 22"
 echo -e "Dropbear         : 143, 109"
