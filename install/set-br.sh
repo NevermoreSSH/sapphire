@@ -3,7 +3,7 @@ GitUser="NevermoreSSH"
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
 wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/${GitUser}/sapphire/main/rclone.conf"
-git clone https://github.com/magnific0/wondershaper.git &> /dev/null
+git clone  https://github.com/MrMan21/wondershaper.git &> /dev/null
 cd wondershaper
 make install
 cd
