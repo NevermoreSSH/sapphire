@@ -85,7 +85,7 @@ or
   - OpenVPN                 : TCP 1194, UDP 2200, SSL 110
   - Stunnel4                : 222, 777
   - Dropbear                : 442, 109
-  - SlowDNS                 : 22,80,443,53,5300
+  - SlowDNS                 : 22, 80, 443, 53, 5300
   - SSH-UDP                 : 1-65535
   - OHP Dropbear            : 8585
   - OHP SSH                 : 8686
