@@ -44,11 +44,15 @@ echo -e "   \e[$number (16)\e[m \e[$below ON/OF Auto Reboot\e[m"
 echo -e "   \e[$number (17)\e[m \e[$below Change Password VPS\e[m"
 echo -e "   \e[$number (18)\e[m \e[$below Check CPU & RAM\e[m"
 echo -e "   \e[$number (19)\e[m \e[$below Change Banner SSH\e[m"
+echo -e ""
+echo -e "   \e[$number (77)\e[m \e[$below Install SlowDNS\e[m"
+echo -e "   \e[$number (88\e[m \e[$below Install UDP Custom\e[m"
+echo -e "   \e[$number (99)\e[m \e[$below Change XrayCore Official 1.7.5\e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
 echo -e "   \e[$back_text \e[$box x)   MENU                             \e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
 echo -e "\e[$line"
-read -p "    Please Input Number  [1-19 or x] :  "  sys
+read -p "    Please Input Number  [1-99 or x] :  "  sys
 echo -e ""
 case $sys in
 1)
@@ -107,6 +111,15 @@ htop
 ;;
 19)
 message-ssh
+;;
+77)
+wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh
+;;
+88)
+wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main/Tunnel/udp.sh && bash udp.sh
+;;
+99)
+mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/Xray-linux-64-v1.7.5/Xray-linux-64-v1.7.5" && chmod 755 /usr/local/bin/xray && xray version
 ;;
 x)
 menu
