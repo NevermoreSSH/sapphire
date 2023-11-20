@@ -113,7 +113,7 @@ sed -i '/#xray-vmess-nontls$/a\#vms '"$user $exp $harini $uuid"'\
 cat>/usr/local/etc/xray/$user-tls.json<<EOF
       {
       "v": "2",
-      "ps": "${user}",
+      "ps": "VMESS_TLS_${user}_${exp}",
       "add": "${sts}${domain}",
       "port": "${tls}",
       "id": "${uuid}",
@@ -129,7 +129,7 @@ EOF
 cat>/usr/local/etc/xray/$user-none.json<<EOF
       {
       "v": "2",
-      "ps": "${user}",
+      "ps": "VMESS_NTLS_${user}_${exp}",
       "add": "${sts}${domain}",
       "port": "${none}",
       "id": "${uuid}",
@@ -618,7 +618,7 @@ export uuid=$(grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 
 cat>/usr/local/etc/xray/$user-tls.json<<EOF
       {
       "v": "2",
-      "ps": "${user}",
+      "ps": "VMESS_TLS_${user}_${exp}",
       "add": "${sts}${domain}",
       "port": "${tls}",
       "id": "${uuid}",
@@ -634,7 +634,7 @@ EOF
 cat>/usr/local/etc/xray/$user-none.json<<EOF
       {
       "v": "2",
-      "ps": "${user}",
+      "ps": "VMESS_NTLS_${user}_${exp}",
       "add": "${sts}${domain}",
       "port": "${none}",
       "id": "${uuid}",
@@ -860,8 +860,8 @@ sed -i '/#xray-vless-tls$/a\#vls '"$user $exp $harini $uuid"'\
 sed -i '/#xray-vless-nontls$/a\#vls '"$user $exp $harini $uuid"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /usr/local/etc/xray/vlessnone.json
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#VLESS_TLS_${user}_${exp}"
+export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#VLESS_NTLS_${user}_${exp}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -935,8 +935,8 @@ sed -i '/#xray-vless-tls$/a\#vls '"$user $exp $harini $uuid"'\
 sed -i '/#xray-vless-nontls$/a\#vls '"$user $exp $harini $uuid"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /usr/local/etc/xray/vlessnone.json
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#VLESS_TLS_${user}_${exp}"
+export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#VLESS_NTLS_${user}_${exp}"
 
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
@@ -1107,8 +1107,8 @@ export harini=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -
 export exp=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 export uuid=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#VLESS_TLS_${user}_${exp}"
+export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#VLESS_NTLS_${user}_${exp}"
 
 clear
 echo -e ""
@@ -1221,8 +1221,8 @@ export harini=`date -d "0 days" +"%Y-%m-%d"`
 sed -i '/#xray-vless-xtls$/a\#vxtls '"$user $exp $harini $uuid"'\
 },{"id": "'""$uuid""'","flow": "'""xtls-rprx-direct""'","level": '"0"',"email": "'""$user""'"' /usr/local/etc/xray/config.json
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#XTLS_DIRECT_${user}_${exp}"
+export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS_SPLICE_${user}_${exp}"
 
 systemctl restart xray.service
 
@@ -1287,8 +1287,8 @@ export harini=`date -d "0 days" +"%Y-%m-%d"`
 sed -i '/#xray-vless-xtls$/a\#vxtls '"$user $exp $harini $uuid"'\
 },{"id": "'""$uuid""'","flow": "'""xtls-rprx-direct""'","level": '"0"',"email": "'""$user""'"' /usr/local/etc/xray/config.json
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#XTLS_DIRECT_${user}_${exp}"
+export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#XTLS_SPLICE_${user}_${exp}"
 
 systemctl restart xray.service
 
@@ -1451,8 +1451,8 @@ export harini=$(grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' 
 export exp=$(grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 export uuid=$(grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
 
-export vlesslink1="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=bug.com#${user}"
-export vlesslink2="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=bug.com#${user}"
+export vlesslink1="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=bug.com#XTLS_DIRECT_${user}_${exp}"
+export vlesslink2="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=bug.com#XTLS_SPLICE_${user}_${exp}"
 
 clear
 echo -e ""
