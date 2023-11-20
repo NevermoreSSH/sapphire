@@ -315,7 +315,7 @@ sed -i '/#xray-vmess-nontls$/a\#vms '"$user $exp $harini $uuid"'\
 cat>/usr/local/etc/xray/$user-tls.json<<EOF
       {
       "v": "2",
-      "ps": "${user}",
+      "ps": "VMESS_TLS_${user}_${exp}",
       "add": "${sts}${domain}",
       "port": "${tls}",
       "id": "${uuid}",
@@ -331,7 +331,7 @@ EOF
 cat>/usr/local/etc/xray/$user-none.json<<EOF
       {
       "v": "2",
-      "ps": "${user}",
+      "ps": "VMESS_NTLS_${user}_${exp}",
       "add": "${sts}${domain}",
       "port": "${none}",
       "id": "${uuid}",
