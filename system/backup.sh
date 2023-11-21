@@ -23,6 +23,7 @@ mkdir -p /root/backup
 sleep 1
 clear
 echo " Please Wait VPS Data Backup In Progress . . . "
+echo " "
 echo " Backup SSH & XRAY Account . . . "
 #cp -r /root/.acme.sh /root/backup/ &> /dev/null
 #cp -r /var/lib/premium-script/ /root/backup/premium-script
@@ -36,9 +37,9 @@ cp -r /etc/gshadow /root/backup/gshadow >/dev/null 2>&1
 cp -r /etc/passwd /root/backup/passwd >/dev/null 2>&1
 cp -r /etc/group /root/backup/group >/dev/null 2>&1
 cd /root
-zip -r $IP-$date_$domain.zip backup > /dev/null 2>&1
-rclone copy /root/$IP-$date_$domain.zip dr:backup/
-url=$(rclone link dr:backup/$IP-$date_$domain.zip)
+zip -r $IP-$date-$domain.zip backup > /dev/null 2>&1
+rclone copy /root/$IP-$date-$domain.zip dr:backup/
+url=$(rclone link dr:backup/$IP-$date-$domain.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
 clear
@@ -53,5 +54,5 @@ echo -e "\033[1;37m$link\033[0m"
 echo ""
 echo "If you want to restore data, please enter the link above"
 rm -rf /root/backup
-rm -r /root/$IP-$date_$domain.zip
+rm -r /root/$IP-$date-$domain.zip
 echo ""
