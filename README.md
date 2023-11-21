@@ -111,11 +111,10 @@ or
    - Fail2Ban                 : [ON]
    - DDOS Dflate              : [ON]
    - IPtables                 : [ON]
-   - Auto-Reboot              : [ON]- 5.00AM
+   - Auto-Reboot              : [ON] - 5.00AM
    - IPv6                     : [OFF]
    - Auto-Remove-Expired      : [ON]
-   - Auto Delete Expired Account
-   - Auto Backup Everyday. PM Telegram Admin for files
+   - Auto Backup Everyday     : [ON] - 7.00AM (PM Telegram Admin for files)
    - Fully automatic script
    - VPS settings
    - Admin Control
