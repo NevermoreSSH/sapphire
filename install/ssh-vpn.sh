@@ -370,6 +370,7 @@ echo "0 5 * * * root reboot" >> /etc/crontab
 echo "0 3 * * * root /usr/bin/xp" >> /etc/crontab
 echo "0 4 * * * root /usr/bin/delete" >> /etc/crontab
 echo "0 6 * * * root backup" >> /etc/crontab
+echo "30 23 * * * root backup" >> /etc/crontab
 
 # // remove unnecessary files
 cd
