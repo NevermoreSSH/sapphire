@@ -114,7 +114,7 @@ or
    - Auto-Reboot              : [ON] - 5.00AM
    - IPv6                     : [OFF]
    - Auto-Remove-Expired      : [ON]
-   - Auto Backup Everyday     : [ON] - 6.00AM (PM Telegram Admin for files)
+   - Auto-Backup-Everyday     : [ON] - 6.00AM (PM Telegram Admin for files)
    - Fully automatic script
    - VPS settings
    - Admin Control
