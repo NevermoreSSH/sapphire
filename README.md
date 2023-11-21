@@ -115,6 +115,7 @@ or
    - IPv6                     : [OFF]
    - Auto-Remove-Expired      : [ON]
    - Auto Delete Expired Account
+   - Auto Backup Everyday. PM Admin for files
    - Fully automatic script
    - VPS settings
    - Admin Control
