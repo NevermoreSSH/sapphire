@@ -93,7 +93,7 @@ or
   - Websocket SSH(HTTP)     : 80
   - Websocket SSL(HTTPS)    : 443, 222
   - Websocket OpenVPN       : 2084
-  - Squid Proxy             : 3128, 8080, 8000
+  - Squid Proxy             : 3128, 8000
   - Badvpn                  : 7100, 7200, 7300
   - Nginx                   : 81
   - XRAY Vmess Ws Tls       : 443
