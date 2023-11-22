@@ -32,7 +32,7 @@
 2. Recommended Debian 10 for fast installation. Ubuntu if you want to use slowDNS but error SSH Websocket.
 3. Tested for VPS Melbi, Digital Ocean, and Centerhop.
 4. Xray-Core v1.7.5 or below can use for this script. Latest Xray-Core will not support XTLS.
-5. No more updates, and this thread is discontinued. TQ
+5. No more updates, and this thread has been discontinued. TQ
 
 ## ♦️Update & Upgrade First Your VPS for Debian 10 & 11♦️
 
