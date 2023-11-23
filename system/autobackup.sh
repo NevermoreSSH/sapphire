@@ -47,7 +47,7 @@ EOF
 fi
 cat << EOF >> /etc/crontab
 # BEGIN_Backup
-5 0 * * * root bckp
+5 0 * * * root backup
 # END_Backup
 EOF
 service cron restart
