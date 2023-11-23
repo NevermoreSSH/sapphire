@@ -44,7 +44,7 @@ echo -e "   \e[$number (16)\e[m \e[$below ON/OF Auto Reboot\e[m"
 echo -e "   \e[$number (17)\e[m \e[$below Change Password VPS\e[m"
 echo -e "   \e[$number (18)\e[m \e[$below Check CPU & RAM\e[m"
 echo -e "   \e[$number (19)\e[m \e[$below Change Banner SSH\e[m"
-echo -e "   \e[$number (20)\e[m \e[$below Autobackup Data\e[m"
+#echo -e "   \e[$number (20)\e[m \e[$below Autobackup Data\e[m"
 echo -e ""
 echo -e "   \e[$number (77)\e[m \e[$below Install SlowDNS\e[m"
 echo -e "   \e[$number (88)\e[m \e[$below Install UDP Custom\e[m"
@@ -113,9 +113,9 @@ htop
 19)
 message-ssh
 ;;
-20)
-autobackup
-;;
+#20)
+#autobackup
+#;;
 77)
 wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh
 ;;
