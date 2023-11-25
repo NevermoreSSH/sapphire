@@ -50,6 +50,7 @@ echo -e "  $green[${white}9${green}] ${green} Restart Trojan Ws & Tcp Tls$NC"
 echo -e "  $green[${white}10${green}] ${green}Restart Badvpn$NC"
 echo -e "  $green[${white}11${green}] ${green}Restart OHP $NC"
 echo -e "  $green[${white}12${green}] ${green}Restart WebSocket$NC"
+echo -e "  $green[${white}13${green}] ${green}Restart SlowDNS$NC"
 echo -e "${blue}══════════════════════════════════════${NC}"
 echo -e "\\E[0;46;30m        x)   MENU                     ${NC}"
 echo -e "${blue}══════════════════════════════════════${NC}"
@@ -261,6 +262,20 @@ case $Restart in
                 echo -e "======================================"
                 echo -e ""
                 echo -e "      \e[0;32mWebSocket Service Restarted\e[0m     "
+                echo -e ""
+	            echo -e "======================================"
+				echo ""
+				read -n 1 -s -r -p "Press any key to back on menu"
+				menu
+                ;;
+				13)
+				clear
+				systemctl restart client-sldns
+				systemctl restart server-sldns
+                echo -e ""
+                echo -e "======================================"
+                echo -e ""
+                echo -e "      \e[0;32mSlowDNS Service Restarted\e[0m     "
                 echo -e ""
 	            echo -e "======================================"
 				echo ""
