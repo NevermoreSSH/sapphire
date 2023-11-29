@@ -48,7 +48,7 @@ echo -e "   \e[$number (19)\e[m \e[$below Change Banner SSH\e[m"
 echo -e ""
 echo -e "   \e[$number (77)\e[m \e[$below Install SlowDNS\e[m"
 echo -e "   \e[$number (88)\e[m \e[$below Install UDP Custom\e[m"
-echo -e "   \e[$number (99)\e[m \e[$below Change XrayCore Official 1.7.5\e[m"
+echo -e "   \e[$number (99)\e[m \e[$below Xray-core Changer\e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
 echo -e "   \e[$back_text \e[$box x)   MENU                             \e[m"
 echo -e "   \e[$line════════════════════════════════════════\e[m"
@@ -123,7 +123,7 @@ wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh 
 wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main/Tunnel/udp.sh && bash udp.sh
 ;;
 99)
-mv /usr/local/bin/xray /usr/local/bin/xray.bakk && wget -q -O /usr/local/bin/xray "https://github.com/NevermoreSSH/Xcore-custompath/releases/download/Xray-linux-64-v1.7.5/Xray-linux-64-v1.7.5" && chmod 755 /usr/local/bin/xray && xray version
+wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
 ;;
 x)
 menu
