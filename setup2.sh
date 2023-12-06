@@ -46,7 +46,20 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
 # Valid Script
-#VALIDITY() {
+VALIDITY() {
+    today=$(date -d "0 days" +"%Y-%m-%d")
+    Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
+    if [[ $today < $Exp1 ]]; then
+        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT NevermoreSSH..\e[0m"
+        sleep 5
+    else
+        echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
+        echo -e "\e[31mPlease renew your ipvps first\e[0m"
+        exit 0
+    fi
+}
+# Valid Script
+VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
     Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
