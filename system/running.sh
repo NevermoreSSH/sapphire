@@ -230,6 +230,7 @@ fi
 #fi
 
 status="$(systemctl show server-sldns.service --no-page)"
+#status="$(systemctl show client-sldns.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
