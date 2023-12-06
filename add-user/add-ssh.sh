@@ -98,7 +98,7 @@ export exp1=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e "\e[$back_text         \e[30m[\e[$box Informasi Account SSH & OpenVPN\e[30m ]\e[1m           \e[m"
+echo -e "\e[$back_text         \e[30m[\e[$box Premium Account SSH & OpenVPN\e[30m ]\e[1m           \e[m"
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
 echo -e "Username         : $Login"
 echo -e "Password         : $Pass"
