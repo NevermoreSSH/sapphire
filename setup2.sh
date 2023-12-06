@@ -50,7 +50,7 @@ VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
     Exp1=$(curl -sS ipv4.icanhazip.com)
     #Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
-    if [[ $today < $Exp1 ]]; then
+    if [[ $today > $Exp1 ]]; then
         echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT NevermoreSSH..\e[0m"
         sleep 5
     else
