@@ -220,16 +220,16 @@ else
 echo -e " DropBear                : "$red"not running (Error)"$NC" "
 fi
 
-status="$(systemctl show server-sldns.service --no-page)"
-status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
-if [ "${status_text}" == "active" ]
-then
-echo -e " DNSTT                   : "$green"running"$NC" ✓"
-else
-echo -e " DNSTT                   : "$red"not running (Error)"$NC" "
-fi
+#status="$(systemctl show server-sldns.service --no-page)"
+#status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
+#if [ "${status_text}" == "active" ]
+#then
+#echo -e " DNSTT                   : "$green"running"$NC" ✓"
+#else
+#echo -e " DNSTT                   : "$red"not running (Error)"$NC" "
+#fi
 
-status="$(systemctl show client-sldns.service --no-page)"
+status="$(systemctl show server-sldns.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
