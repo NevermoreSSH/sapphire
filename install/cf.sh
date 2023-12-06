@@ -26,7 +26,7 @@ exit 0
 fi
 clear
 apt install jq curl -y
-DOMAIN=nevermore-vpn.do
+DOMAIN=nevermore-vpn.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.nevermore.me
 CF_ID=nevermore2601@gmail.com
