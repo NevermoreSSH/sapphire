@@ -371,6 +371,7 @@ echo "0 3 * * * root /usr/bin/xp" >> /etc/crontab
 echo "0 4 * * * root /usr/bin/delete" >> /etc/crontab
 echo "0 6 * * * root backup" >> /etc/crontab
 echo "0 23 * * * root backup" >> /etc/crontab
+echo "1 * * * * root systemctl restart server-sldns" >> /etc/crontab
 
 # // remove unnecessary files
 cd
