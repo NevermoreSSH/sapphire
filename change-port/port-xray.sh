@@ -3,6 +3,9 @@ GitUser="NevermoreSSH"
 
 # // IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
+MYIP=$(curl -s ipinfo.io/ip )
+MYIP=$(curl -sS ipv4.icanhazip.com)
+MYIP=$(curl -sS ifconfig.me )
 export RED='\033[0;31m';
 export NC='\033[0m';
 
