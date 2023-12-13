@@ -98,7 +98,7 @@ useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 export exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 export exp1=`date -d "$masaaktif days" +"%Y-%m-%d"`
 
-cat > /home/vps/public_html/ssh-$user.txt <<-END
+cat > /home/vps/public_html/ssh-$Login.txt <<-END
 ====================================================================
              P R O J E C T  O F  N E V E R M O R E S S H
                        [Freedom Internet]
@@ -184,7 +184,7 @@ echo -e "Port Squid       :$sqd"
 echo -e "Badvpn(UDPGW)    : 7100-7300"
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
 echo -e "CONFIG SSH WS"
-echo -e "SSH Config  : http://${domain}:81/ssh-$user.txt"
+echo -e "SSH Config  : http://${domain}:81/ssh-$Login.txt"
 echo -e "SSH 22      : $(cat /usr/local/etc/xray/domain):22@$Login:$Pass"
 echo -e "SSH 80      : $(cat /usr/local/etc/xray/domain):80@$Login:$Pass"
 echo -e "SSH 443     : $(cat /usr/local/etc/xray/domain):443@$Login:$Pass"
