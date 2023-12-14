@@ -844,6 +844,40 @@ export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encry
 systemctl restart xray@vless
 systemctl restart xray@vlessnone
 
+cat > /home/vps/public_html/vless-$user.txt <<-END
+
+====================================================================
+             P R O J E C T  O F  N E V E R M O R E S S H
+                       [Freedom Internet]
+====================================================================
+             https://github.com/NevermoreSSH/
+====================================================================
+             Format Vless WS
+====================================================================
+
+             Link Vless Account
+====================================================================
+Remarks          : ${user}
+Domain           : ${domain}
+IP/Host          : $MYIP
+Port TLS         : $tls
+Port None TLS    : $none
+User ID          : ${uuid}
+Encryption       : None
+Network          : WebSocket
+Path Tls         : $patchtls
+Path None Tls    : $patchnontls
+allowInsecure    : True/allow
+====================================================================
+Link TLS : $vlesslink1
+====================================================================
+Link none TLS : $vlesslink2
+====================================================================
+Expired On : $exp
+====================================================================
+
+END
+
 clear
 echo -e ""
 echo -e "\e[$line═════════════════════════════════\e[m"
