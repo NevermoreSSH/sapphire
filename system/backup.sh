@@ -31,7 +31,7 @@ echo " Backup SSH & XRAY Account . . . "
 #cp -r /root/.acme.sh /root/backup/ &> /dev/null
 #cp -r /var/lib/premium-script/ /root/backup/premium-script
 #cp -r /usr/local/etc/xray /root/backup/xray
-#cp -r /home/vps/public_html /root/backup/public_html
+cp -r /home/vps/public_html /root/backup/public_html
 cp -r /usr/local/etc/xray/ /root/backup/xray/ >/dev/null 2>&1
 cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
 cp -r /etc/crontab /root/backup/crontab &> /dev/null
