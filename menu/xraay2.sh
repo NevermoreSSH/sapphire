@@ -1238,6 +1238,38 @@ export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryptio
 
 systemctl restart xray.service
 
+cat > /home/vps/public_html/vlessxtls-$user.txt <<-END
+
+====================================================================
+             P R O J E C T  O F  N E V E R M O R E S S H
+                       [Freedom Internet]
+====================================================================
+             https://github.com/NevermoreSSH/
+====================================================================
+             Format Vless XLTS
+====================================================================
+
+             Link Vless Account
+====================================================================
+Remarks        : ${user}
+Domain         : ${domain}
+Ip/Host        : ${MYIP}
+Port Xtls      : $xtls
+User ID        : ${uuid}
+Encryption     : None
+Network        : TCP
+Flow           : Direct & Splice
+allowInsecure  : True
+====================================================================
+Link Xtls Direct  : ${vlesslink1}
+====================================================================
+Link Xtls Splice  : ${vlesslink2}
+====================================================================
+Expired On : $exp
+====================================================================
+
+END
+
 clear
 echo -e ""
 echo -e "\e[$line═════════════════════════════════\e[m"
