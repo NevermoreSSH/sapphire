@@ -108,6 +108,34 @@ echo -e "### $user $exp $harini $uuid" >> /usr/local/etc/xray/akunxtr.conf
 systemctl restart xray@tcp
 export trojanlink="trojan://${user}@${sts}${domain}:${xtr}?sni=$sni#${user}"
 
+cat > /home/vps/public_html/trojan-$user.txt <<-END
+
+====================================================================
+             P R O J E C T  O F  N E V E R M O R E S S H
+                       [Freedom Internet]
+====================================================================
+             https://github.com/NevermoreSSH/
+====================================================================
+             Format Trojan TCP
+====================================================================
+
+             Link Trojan Account
+====================================================================
+Remarks       : ${user}
+Domain        : ${domain}
+IP/Host       : ${MYIP}
+Port          : ${xtr}
+Key           : ${user}
+Network       : TCP
+allowInsecure : True/allow
+====================================================================
+Link Trojan : ${trojanlink}
+====================================================================
+Expired On : $exp
+====================================================================
+
+END
+
 clear
 echo -e ""
 echo -e "\e[$line════════[XRAY TROJAN TCP]════════\e[m"
