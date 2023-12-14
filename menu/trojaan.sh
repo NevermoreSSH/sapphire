@@ -469,6 +469,40 @@ export trojanlink1="trojan://${user}@${sts}${domain}:443?path=$patchtls&security
 export trojanlink2="trojan://${user}@who.int:443?path=wss://who.int$patchtls&security=tls&host=${sts}${domain}&type=ws&sni=who.int#${user}"
 export trojanlink3="trojan://${user}@onlinepayment.celcom.com.my:443?path=wss://onlinepayment.celcom.com.my$patchtls&security=tls&host=${sts}${domain}&type=ws&sni=onlinepayment.celcom.com.my#${user}"
 
+cat > /home/vps/public_html/trojanws-$user.txt <<-END
+
+====================================================================
+             P R O J E C T  O F  N E V E R M O R E S S H
+                       [Freedom Internet]
+====================================================================
+             https://github.com/NevermoreSSH/
+====================================================================
+             Format Trojan WS
+====================================================================
+
+             Link Trojan Account
+====================================================================
+Remarks       : ${user}
+Domain        : ${domain}
+IP/Host       : ${MYIP}
+Port Tls      : ${trws}
+Port None     : ${trnone}
+Key           : ${user}
+Security      : Auto
+Network       : Websocket
+Path Tls      : $patchtls
+Path Ntls     : $patchnone
+allowInsecure : True/allow
+====================================================================
+Link Trojan TLS : ${trojanlink1}
+====================================================================
+Link Trojan NTLS : ${trojanlink}
+====================================================================
+Expired On : $exp
+====================================================================
+
+END
+
 clear
 echo -e ""
 echo -e "\e[$line════════[XRAY TROJAN WS TLS]════════\e[m"
