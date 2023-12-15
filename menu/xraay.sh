@@ -205,7 +205,7 @@ proxy-groups:
       - $user
 END
 # // masukkan payloadnya ke dalam config yaml
-cat /etc/openvpn/server/cll.key >> /usr/local/etc/xray/$user-clash-for-android.yaml
+cat /etc/openvpn/server/cll.key >> /usr/local/etc/xray/$user-$exp-clash-for-android.yaml
 
 # // Copy config Yaml client ke home directory root agar mudah didownload ( YAML )
 cp /usr/local/etc/xray/$user-$exp-clash-for-android.yaml /home/vps/public_html/$user-$exp-clash-for-android.yaml
