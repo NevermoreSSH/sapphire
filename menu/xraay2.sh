@@ -850,9 +850,9 @@ cat > /home/vps/public_html/vless-$user.txt <<-END
              P R O J E C T  O F  N E V E R M O R E S S H
                        [Freedom Internet]
 ====================================================================
-             https://github.com/NevermoreSSH/
+             https://github.com/NevermoreSSH/sapphire
 ====================================================================
-             Format Vless WS
+             Format Vless WS - SPv2
 ====================================================================
 
              Link Vless Account
@@ -1244,9 +1244,9 @@ cat > /home/vps/public_html/vlessxtls-$user.txt <<-END
              P R O J E C T  O F  N E V E R M O R E S S H
                        [Freedom Internet]
 ====================================================================
-             https://github.com/NevermoreSSH/
+             https://github.com/NevermoreSSH/sapphire
 ====================================================================
-             Format Vless XLTS
+             Format Vless XLTS - SPv2
 ====================================================================
 
              Link Vless Account
