@@ -114,9 +114,9 @@ cat > /home/vps/public_html/trojan-$user.txt <<-END
              P R O J E C T  O F  N E V E R M O R E S S H
                        [Freedom Internet]
 ====================================================================
-             https://github.com/NevermoreSSH/
+             https://github.com/NevermoreSSH/sapphire
 ====================================================================
-             Format Trojan TCP
+             Format Trojan TCP - SPv2
 ====================================================================
 
              Link Trojan Account
@@ -475,9 +475,9 @@ cat > /home/vps/public_html/trojanws-$user.txt <<-END
              P R O J E C T  O F  N E V E R M O R E S S H
                        [Freedom Internet]
 ====================================================================
-             https://github.com/NevermoreSSH/
+             https://github.com/NevermoreSSH/sapphire
 ====================================================================
-             Format Trojan WS
+             Format Trojan WS - SPv2
 ====================================================================
 
              Link Trojan Account
