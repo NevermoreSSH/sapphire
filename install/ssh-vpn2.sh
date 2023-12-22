@@ -300,7 +300,7 @@ wget -O cfd "https://raw.githubusercontent.com/${GitUser}/sapphire/main/cloud/cf
 wget -O cfp "https://raw.githubusercontent.com/${GitUser}/sapphire/main/cloud/cfp.sh"
 wget -O swap "https://raw.githubusercontent.com/${GitUser}/sapphire/main/swapkvm.sh"
 wget -O check-sc "https://raw.githubusercontent.com/${GitUser}/sapphire/main/system/running.sh"
-wget -O ssh "https://raw.githubusercontent.com/${GitUser}/sapphire/main/menu/ssh.sh"
+wget -O ssh2 "https://raw.githubusercontent.com/${GitUser}/sapphire/main/menu/ssh2.sh"
 wget -O autoreboot "https://raw.githubusercontent.com/${GitUser}/sapphire/main/system/autoreboot.sh"
 wget -O bbr "https://raw.githubusercontent.com/${GitUser}/sapphire/main/system/bbr.sh"
 wget -O port-ohp "https://raw.githubusercontent.com/${GitUser}/sapphire/main/change-port/port-ohp.sh"
@@ -352,7 +352,7 @@ chmod +x cfd
 chmod +x cfp
 chmod +x swap
 chmod +x check-sc
-chmod +x ssh
+chmod +x ssh2
 chmod +x autoreboot
 chmod +x bbr
 chmod +x port-ohp
