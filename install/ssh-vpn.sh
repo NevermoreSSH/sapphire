@@ -352,7 +352,7 @@ chmod +x cfd
 chmod +x cfp
 chmod +x swap
 chmod +x check-sc
-chmod +x ssh
+chmod +x ssh2
 chmod +x autoreboot
 chmod +x bbr
 chmod +x port-ohp
