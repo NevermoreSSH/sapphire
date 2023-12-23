@@ -289,6 +289,7 @@ wget -O port-squid "https://raw.githubusercontent.com/${GitUser}/sapphire/main/c
 wget -O port-websocket "https://raw.githubusercontent.com/${GitUser}/sapphire/main/change-port/port-websocket.sh"
 wget -O wbmn "https://raw.githubusercontent.com/${GitUser}/sapphire/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/${GitUser}/sapphire/main/xp.sh"
+wget -O xp2 "https://raw.githubusercontent.com/${GitUser}/sapphire/main/xp2.sh"
 wget -O kernel-updt "https://raw.githubusercontent.com/${GitUser}/sapphire/main/kernel.sh"
 wget -O user-list "https://raw.githubusercontent.com/${GitUser}/sapphire/main/more-option/user-list.sh"
 wget -O user-lock "https://raw.githubusercontent.com/${GitUser}/sapphire/main/more-option/user-lock.sh"
@@ -341,6 +342,7 @@ chmod +x port-squid
 chmod +x port-websocket
 chmod +x wbmn
 chmod +x xp
+chmod +x xp2
 chmod +x kernel-updt
 chmod +x user-list
 chmod +x user-lock
