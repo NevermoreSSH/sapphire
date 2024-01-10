@@ -371,6 +371,7 @@ chmod +x netf
 chmod +x ins-helium
 echo "0 1 * * * root delete && xp" >> /etc/crontab
 echo "0 8 * * * root clear-log" >> /etc/crontab
+echo "0 9 * * * root /usr/bin/clear-log" >> /etc/crontab
 echo "0 5 * * * root reboot" >> /etc/crontab
 echo "0 3 * * * root /usr/bin/xp" >> /etc/crontab
 echo "0 4 * * * root /usr/bin/delete" >> /etc/crontab
