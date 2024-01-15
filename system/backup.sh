@@ -33,7 +33,7 @@ echo " Backup SSH & XRAY Account . . . "
 #cp -r /usr/local/etc/xray /root/backup/xray
 cp -r /home/vps/public_html /root/backup/public_html
 cp -r /usr/local/etc/xray/ /root/backup/xray/ >/dev/null 2>&1
-cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
+#cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
 #cp -r /etc/crontab /root/backup/crontab &> /dev/null
 cp -r /etc/shadow /root/backup/shadow >/dev/null 2>&1
 cp -r /etc/gshadow /root/backup/gshadow >/dev/null 2>&1
