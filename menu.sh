@@ -169,7 +169,7 @@ echo -e "  \e[$number (•7)\e[m \e[$below REBOOT VPS\e[m           \e[$number (
 echo -e ""
 echo -e "  \e[$below[Ctrl + C] For exit from main menu\e[m"
 echo -e " \e[$line╒════════════════════════════════════════════════════════════╕\e[m"
-echo -e "  \e[$below Version Name         : SSH XRAY WEBSOCKET MULTIPORT v2.0"
+echo -e "  \e[$below Version Name         : SSH XRAY WEBSOCKET MULTIPORT v2.2"
 echo -e "  \e[$below Autoscript By        : NEVERMORESSH"
 echo -e "  \e[$below Certificate Status   : Expired in $certifacate days"
 echo -e "  \e[$below Client Name          : $username"
