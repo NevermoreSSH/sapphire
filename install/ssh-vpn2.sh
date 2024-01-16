@@ -378,7 +378,7 @@ echo "0 23 * * * root backup" >> /etc/crontab
 echo "0 3 * * * root /usr/bin/xp" >> /etc/crontab
 echo "0 4 * * * root /usr/bin/delete" >> /etc/crontab
 echo "0 9 * * * root /usr/bin/clear-log" >> /etc/crontab
-echo "10 23 * * * root /usr/bin/backup" >> /etc/crontab
+#echo "10 23 * * * root /usr/bin/backup" >> /etc/crontab
 
 # // remove unnecessary files
 cd
