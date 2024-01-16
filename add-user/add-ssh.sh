@@ -204,5 +204,5 @@ echo -e "\e[$line═════════════════════
 echo -e "PAYLOAD WS OVPN  : GET wss://$sni/ HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
 echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu ssh"
+read -n 1 -s -r -p "Press any key to back on menu SSH"
 ssh2
