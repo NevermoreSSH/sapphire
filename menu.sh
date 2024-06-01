@@ -74,10 +74,16 @@ tyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}
 dmon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $3" "substr ($4, 1, 1)}')"
 umon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $6" "substr ($7, 1, 1)}')"
 tmon="$(vnstat -i eth0 -m | grep "$(date +"%b '%y")" | awk '{print $9" "substr ($10, 1, 1)}')"
-#Fixed for ubuntu total usage
-dmon="$(vnstat -i eth0 | grep 'total:' | awk '{print $2, $3}')"
-umon="$(vnstat -i eth0 | grep 'total:' | awk '{print $5, $6}')"
-tmon="$(vnstat -i eth0 | grep 'total:' | awk '{print $8, $9}')"
+# Fixed vnstat for ubuntu v2
+dmon="$(vnstat -m | grep $(date +%Y-%m) | awk '{print $2, $3}')"
+umon="$(vnstat -m | grep $(date +%Y-%m) | awk '{print $5, $6}')"
+tmon="$(vnstat -m | grep $(date +%Y-%m) | awk '{print $8, $9}')"                     # total usage current monthly
+dtoday="$(vnstat -d | grep $(date +%Y-%m-%d) | awk '{print $2, $3}')"
+utoday="$(vnstat -d | grep $(date +%Y-%m-%d) | awk '{print $5, $6}')"
+ttoday="$(vnstat -d | grep $(date +%Y-%m-%d) | awk '{print $8, $9}')"                # today usage
+dyest="$(vnstat -d | grep $(date -d 'yesterday' +%Y-%m-%d) | awk '{print $2, $3}')"
+uyest="$(vnstat -d | grep $(date -d 'yesterday' +%Y-%m-%d) | awk '{print $5, $6}')"
+tyest="$(vnstat -d | grep $(date -d 'yesterday' +%Y-%m-%d) | awk '{print $8, $9}')"  # yesterday usage
 
 # STATUS EXPIRED ACTIVE
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[4$below" && Font_color_suffix="\033[0m"
