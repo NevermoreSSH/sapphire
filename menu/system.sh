@@ -49,6 +49,9 @@ echo -e "   \e[$number (18)\e[m \e[$below Check CPU & RAM\e[m"
 echo -e "   \e[$number (19)\e[m \e[$below Change Banner SSH\e[m"
 echo -e "   \e[$number (20)\e[m \e[$below SwapRAM Menu \e[m"
 echo -e ""
+echo -e "   \e[$number (55)\e[m \e[$below Install Noobzvpns\e[m"
+echo -e "   \e[$number (66)\e[m \e[$below Uninstall Noobzvpns\e[m"
+echo -e ""
 echo -e "   \e[$number (77)\e[m \e[$below Install SlowDNS\e[m"
 echo -e "   \e[$number (88)\e[m \e[$below Install UDP Custom\e[m"
 echo -e "   \e[$number (99)\e[m \e[$below Xray-core Changer\e[m"
@@ -118,6 +121,14 @@ message-ssh
 ;;
 20)
 wget -q -O /usr/bin/swapram "https://raw.githubusercontent.com/NevermoreSSH/swapram/main/swapram.sh" && chmod +x /usr/bin/swapram && swapram
+;;
+55)
+apt update && apt install git && git clone https://github.com/NevermoreSSH/noobzvpns.git && cd noobzvpns/ && sh ./install.sh;
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/NevermoreSSH/noobzvpns/main/sapphire/menu" && chmod +x /usr/bin/menu;
+wget -q -O /usr/bin/nnoobz "https://raw.githubusercontent.com/NevermoreSSH/noobzvpns/main/sapphire/nnoobz" && chmod +x /usr/bin/nnoobz;
+;;
+66)
+cd noobzvpns/ && sh ./uninstall.sh && cd && rm -r noobzvpns && rm -r /usr/bin/nnoobz && reboot
 ;;
 77)
 wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh
