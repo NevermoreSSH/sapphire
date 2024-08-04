@@ -98,6 +98,7 @@ tyest="$(vnstat -i "$interface1" | grep "yesterday" | awk '{print $8" "substr ($
 dmon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $2" "substr ($3, 1, 1)}')"
 umon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $5" "substr ($6, 1, 1)}')"
 tmon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $8" "substr ($9, 1, 1)}')"
+totalmon="$(vnstat | grep "total:" | awk '{print $8, $9}')"
 
 # STATUS EXPIRED ACTIVE
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[4$below" && Font_color_suffix="\033[0m"
@@ -173,7 +174,7 @@ echo -e " \e[$line╒═══════════════════�
 echo -e "  \e[$text Traffic\e[0m       \e[${text}Today      Yesterday        Month   "
 echo -e "  \e[$text Download\e[0m   \e[${text}   $dtoday    $dyest       $dmon   \e[0m"
 echo -e "  \e[$text Upload\e[0m     \e[${text}   $utoday    $uyest       $umon   \e[0m"
-echo -e "  \e[$text Total\e[0m       \e[${text}  $ttoday    $tyest       $tmon  \e[0m "
+echo -e "  \e[$text Total\e[0m       \e[${text}  $ttoday    $tyest       $tmon ($totalmon)  \e[0m "
 echo -e " \e[$line╘════════════════════════════════════════════════════════════╛\e[m"
 echo -e " \e[$text Ssh/Ovpn   V2ray   Vless   Vlessxtls   Trojan-Ws   Trojan-Tls \e[0m "    
 echo -e " \e[$below    $total_ssh         $vmess       $vless        $xtls           $trws           $trtls \e[0m "
