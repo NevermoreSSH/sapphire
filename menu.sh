@@ -98,7 +98,7 @@ tyest="$(vnstat -i "$interface1" | grep "yesterday" | awk '{print $8" "substr ($
 dmon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $2" "substr ($3, 1, 1)}')"
 umon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $5" "substr ($6, 1, 1)}')"
 tmon="$(vnstat -i "$interface1" -m | awk 'NR==6 {print $8" "substr ($9, 1, 1)}')"
-totalmon="$(vnstat | grep "total:" | awk '{print $8, $9}')"
+totalmon="$(vnstat -i "$interface1" | grep "total:" | awk '{print $8" "substr ($9, 1, 1)}')"
 
 # STATUS EXPIRED ACTIVE
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[4$below" && Font_color_suffix="\033[0m"
